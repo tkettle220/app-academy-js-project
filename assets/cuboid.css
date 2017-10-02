@@ -1,0 +1,90 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cube {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: 50px auto;
+  position: relative;
+
+  -webkit-perspective:50000;
+  -webkit-transform-style:preserve-3d;
+  -webkit-transition:all .3s linear;
+  -webkit-transform:rotateX(-100deg) rotateZ(-40deg) translateZ(-30px);
+}
+
+.cube div {
+  width:100%;
+  height:100%;
+  position:absolute;
+  -webkit-transform-style:preserve-3d;
+}
+
+.cube #top {
+  background: red;
+  opacity: 0.5;
+
+}
+
+.cube #left {
+  -webkit-transform-origin:0% 0%;
+  -webkit-transform:rotateY(-90deg);
+  background:#D8335B;
+  opacity: 0.5;
+
+}
+.cube #right {
+  -webkit-transform-origin:100% 0%;
+  -webkit-transform:rotateY(90deg);
+  background: black;
+  opacity: 0.5;
+
+}
+
+.cube #bottom {
+  -webkit-transform:translateZ(300px);
+  background:orange;
+  opacity: 0.5;
+
+}
+
+.cube #front {
+  -webkit-transform-origin:0% 0%;
+  -webkit-transform:rotateX(90deg);
+  opacity: 0.5;
+  background:#953163;
+}
+
+.cube #back {
+  -webkit-transform-origin: 100% 100%;
+  -webkit-transform:rotateX(-90deg);
+  opacity: 0.5;
+  background:#953163;
+}
+
+/*
+https://codepen.io/anon/pen/EibhI used as reference for creating a cube with css
+*/
