@@ -23,17 +23,22 @@ a {
   text-decoration: none;
 }
 
+
+body {
+  -webkit-transition:all .3s linear;
+}
+
 .cube {
-  width: 300px;
-  height: 300px;
-  display: block;
-  margin: 50px auto;
-  position: relative;
+  width:300px;
+  height:300px;
+  display:block;
+  margin:50px auto;
+  position:relative;
 
   -webkit-perspective:50000;
   -webkit-transform-style:preserve-3d;
   -webkit-transition:all .3s linear;
-  -webkit-transform:rotateX(-100deg) rotateZ(-40deg) translateZ(-30px);
+  -webkit-transform:rotateX(-110deg) rotateZ(-20deg);
 }
 
 .cube div {
@@ -45,44 +50,32 @@ a {
 
 .cube #top {
   background: red;
-  opacity: 0.5;
-
 }
 
 .cube #left {
   -webkit-transform-origin:0% 0%;
   -webkit-transform:rotateY(-90deg);
   background:#D8335B;
-  opacity: 0.5;
-
 }
 .cube #right {
   -webkit-transform-origin:100% 0%;
   -webkit-transform:rotateY(90deg);
   background: black;
-  opacity: 0.5;
-
 }
 
 .cube #bottom {
   -webkit-transform:translateZ(300px);
   background:orange;
-  opacity: 0.5;
-
 }
 
 .cube #front {
   -webkit-transform-origin:0% 0%;
-  -webkit-transform:rotateX(90deg);
-  opacity: 0.5;
-  background:#953163;
+  -webkit-transform:rotateX(90deg);  background:#953163;
 }
 
 .cube #back {
   -webkit-transform-origin: 100% 100%;
-  -webkit-transform:rotateX(-90deg);
-  opacity: 0.5;
-  background:#953163;
+  -webkit-transform:rotateX(-90deg);  background:#953163;
 }
 
 /*
