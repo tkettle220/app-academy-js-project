@@ -108,7 +108,7 @@ body {
   width: 100%;
 }
 
-#player {
+.player {
   background: red;
 }
 
