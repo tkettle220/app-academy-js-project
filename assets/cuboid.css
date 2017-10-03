@@ -45,35 +45,70 @@ body {
 }
 
 .cube {
-  font-size: 4em;
-  width: 2em;
-  margin: 1.5em auto;
+  font-size: 20px;
+  width: 200px;
+  margin: 150px auto;
   transform-style: preserve-3d;
-  transform: rotateX(-30deg) rotateY(32deg);
+  transform: rotateX(0deg) rotateY(45deg);
 }
 
 .side {
   position: absolute;
-  width: 2em;
-  height: 2em;
+  width: 200px;
+  height: 200px;
 
   background: blue;
-  border: 1px solid rgba(0,0,0,.5);
 
   color: white;
   text-align: center;
-  line-height: 2em;
+  line-height: 66px;
 }
 
-.front  { transform:                  translateZ(1em); }
-.top    { transform: rotateX( 90deg)  translateZ(1em); }
-.right  { transform: rotateY( 90deg)  translateZ(1em); }
-.left   { transform: rotateY(-90deg)  translateZ(1em); }
-.bottom { transform: rotateX(-90deg)  translateZ(1em); }
-.back   { transform: rotateY(-180deg) translateZ(1em); }
+.front  { transform:                  translateZ(100px); }
+.top    { transform: rotateX( 90deg)  translateZ(100px); }
+.right  { transform: rotateY( 90deg)  translateZ(100px); }
+.left   { transform: rotateY(-90deg)  translateZ(100px); }
+.bottom { transform: rotateX(-90deg)  translateZ(100px); }
+.back   { transform: rotateY(-180deg) translateZ(100px); }
 
+.front {
+  background-color: #F89406;
+}
+
+.back {
+  background: #D91E18;
+}
+
+.left {
+  background: #446CB3;
+}
+
+.right {
+  background: #019875;
+}
+
+.top {
+  background: #ECF0F1;
+}
+
+.bottom {
+  background: #F7CA18;
+;
+}
+
+.side > div {
+  color: black;
+  display: flex;
+  height: 33.33%;
+}
+
+.side > div > div {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+}
 
 
 /*
-https://codepen.io/anon/pen/EibhI used as reference for creating a cube with css
+https://codepen.io/anon/pen/EibhI and https://css-tricks.com/almanac/properties/p/perspective/ used as base to create cube with css
 */
