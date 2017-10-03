@@ -108,6 +108,10 @@ body {
   width: 100%;
 }
 
+#player {
+  background: red;
+}
+
 
 /*
 https://codepen.io/anon/pen/EibhI and https://css-tricks.com/almanac/properties/p/perspective/ used as base to create cube with css
