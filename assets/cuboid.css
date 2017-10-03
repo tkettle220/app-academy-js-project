@@ -1,3 +1,4 @@
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,55 +29,50 @@ body {
   -webkit-transition:all .3s linear;
 }
 
+
+.wrapper {
+  width: 50%;
+  float: left;
+}
+
+.w1 {
+  perspective: 1000px;
+}
+
+
+.wrapper h1 {
+  text-align: center;
+}
+
 .cube {
-  width:300px;
-  height:300px;
-  display:block;
-  margin:50px auto;
-  position:relative;
-
-  -webkit-perspective:50000;
-  -webkit-transform-style:preserve-3d;
-  -webkit-transition:all .3s linear;
-  -webkit-transform:rotateX(-110deg) rotateZ(-20deg);
+  font-size: 4em;
+  width: 2em;
+  margin: 1.5em auto;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(32deg);
 }
 
-.cube div {
-  width:100%;
-  height:100%;
-  position:absolute;
-  -webkit-transform-style:preserve-3d;
+.side {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+
+  background: blue;
+  border: 1px solid rgba(0,0,0,.5);
+
+  color: white;
+  text-align: center;
+  line-height: 2em;
 }
 
-.cube #top {
-  background: red;
-}
+.front  { transform:                  translateZ(1em); }
+.top    { transform: rotateX( 90deg)  translateZ(1em); }
+.right  { transform: rotateY( 90deg)  translateZ(1em); }
+.left   { transform: rotateY(-90deg)  translateZ(1em); }
+.bottom { transform: rotateX(-90deg)  translateZ(1em); }
+.back   { transform: rotateY(-180deg) translateZ(1em); }
 
-.cube #left {
-  -webkit-transform-origin:0% 0%;
-  -webkit-transform:rotateY(-90deg);
-  background:#D8335B;
-}
-.cube #right {
-  -webkit-transform-origin:100% 0%;
-  -webkit-transform:rotateY(90deg);
-  background: black;
-}
 
-.cube #bottom {
-  -webkit-transform:translateZ(300px);
-  background:orange;
-}
-
-.cube #front {
-  -webkit-transform-origin:0% 0%;
-  -webkit-transform:rotateX(90deg);  background:#953163;
-}
-
-.cube #back {
-  -webkit-transform-origin: 100% 100%;
-  -webkit-transform:rotateX(-90deg);  background:#953163;
-}
 
 /*
 https://codepen.io/anon/pen/EibhI used as reference for creating a cube with css
