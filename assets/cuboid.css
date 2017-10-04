@@ -34,7 +34,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-transition:all .3s linear;
   background-position: 50% 50%;
   background-size: auto;
     background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
@@ -109,6 +108,8 @@ button[name="new-game-button"] {
   width: 300px;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(45deg);
+  -webkit-transition: all .3s linear;
+  
 }
 
 .side {
@@ -164,21 +165,24 @@ button[name="new-game-button"] {
 }
 
 .side > div > div {
+  background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size:cover;
   border: 1px solid black;
   width: 100%;
 }
 
 .Coin {
   background-image: url("https://mobilegamegraphics.com/wp-content/uploads/2015/06/Coin_spin.gif");
+  background-size: 40%;
 }
 
 .Player {
+  background-size: 120%;
   background-image: url("https://i.pinimg.com/originals/cc/87/84/cc87848693f5d5123cad63f60f74eff4.gif");
 }
 
 .Enemy {
+  background-size: 80%;
   background-image: url("https://vignette.wikia.nocookie.net/ninjahattori/images/6/68/Shuriken.gif/revision/latest?cb=20170320055932");
 }
 
