@@ -108,6 +108,10 @@ body {
   width: 100%;
 }
 
+.Coin {
+  background: blue;
+}
+
 .Player {
   background: purple;
 }
@@ -116,9 +120,6 @@ body {
   background: red;
 }
 
-.Coin {
-  background: blue;
-}
 
 /*
 Collision!
