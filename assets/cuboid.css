@@ -79,6 +79,10 @@ button {
   width: 50px;
 }
 
+button[name="new-game-button"] {
+  display: none;
+}
+
 .sidebar-footer {
   width: 100%;
   display: flex;
