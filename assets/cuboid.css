@@ -24,19 +24,75 @@ a {
   text-decoration: none;
 }
 
+html {
+  height: 100%;
+}
+
 
 body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   -webkit-transition:all .3s linear;
+  background-position: 50% 50%;
+  background-size: auto;
+    background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
 }
 
 
 .wrapper {
-  width: 50%;
-  float: left;
+  /*this margin offests the cube being displayed 300px below where it should be*/
+  margin-bottom: 300px;
+  margin-right: 150px;
+  margin-left: 150px;
+  width: 300px;
 }
 
+
+.sidebar {
+  min-width: 400px;
+  max-width: 400px;
+  height: 300px;
+
+  margin-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+
+
+  border: 3px solid white;
+  border-radius: 3px;
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Avant Garde" "Century Gothic", sans-serif;
+}
+
+button {
+  width: 50px;
+}
+
+.sidebar-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sidebar-footer span {
+  font-size: 24px;
+}
+
+
 .w1 {
-  perspective: 1000px;
+  perspective: 3000px;
 }
 
 
@@ -46,53 +102,54 @@ body {
 
 .cube {
   font-size: 20px;
-  width: 200px;
-  margin: 150px auto;
+  width: 300px;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(45deg);
 }
 
 .side {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
 
-  background: blue;
+  background-position: 50% 50%;
+  background-size:cover;
 
   color: white;
   text-align: center;
   line-height: 66px;
+
 }
 
-.front  { transform:                  translateZ(100px); }
-.top    { transform: rotateX( 90deg)  translateZ(100px); }
-.right  { transform: rotateY( 90deg)  translateZ(100px); }
-.left   { transform: rotateY(-90deg)  translateZ(100px); }
-.bottom { transform: rotateX(-90deg)  translateZ(100px); }
-.back   { transform: rotateY(-180deg) translateZ(100px); }
+.front  { transform:                  translateZ(150px); }
+.top    { transform: rotateX( 90deg)  translateZ(150px); }
+.right  { transform: rotateY( 90deg)  translateZ(150px); }
+.left   { transform: rotateY(-90deg)  translateZ(150px); }
+.bottom { transform: rotateX(-90deg)  translateZ(150px); }
+.back   { transform: rotateY(-180deg) translateZ(150px); }
 
 .front {
-  background-color: #F89406;
+  background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
 }
 
 .back {
-  background: #D91E18;
+  background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
 }
 
 .left {
-  background: #446CB3;
+  background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
 }
 
 .right {
-  background: #019875;
+  background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
 }
 
 .top {
-  background: #ECF0F1;
+  background-image: url("https://ak3.picdn.net/shutterstock/videos/2805553/thumb/1.jpg");
 }
 
 .bottom {
-  background: #F7CA18;
+  background-image: url("https://img00.deviantart.net/2a25/i/2014/326/7/0/fantasy_cave_mysterious_digital_art_concept_by_hendyrico-d879l77.jpg");
 ;
 }
 
@@ -103,20 +160,22 @@ body {
 }
 
 .side > div > div {
+  background-position: 50% 50%;
+  background-size:cover;
   border: 1px solid black;
   width: 100%;
 }
 
 .Coin {
-  background: blue;
+  background-image: url("https://mobilegamegraphics.com/wp-content/uploads/2015/06/Coin_spin.gif");
 }
 
 .Player {
-  background: purple;
+  background-image: url("https://i.pinimg.com/originals/cc/87/84/cc87848693f5d5123cad63f60f74eff4.gif");
 }
 
 .Enemy {
-  background: red;
+  background-image: url("https://vignette.wikia.nocookie.net/ninjahattori/images/6/68/Shuriken.gif/revision/latest?cb=20170320055932");
 }
 
 
@@ -124,8 +183,9 @@ body {
 Collision!
 */
 .Player.Enemy {
-  background: yellow;
+  background-image: url("https://www.spreadshirt.com/image-server/v1/mp/designs/12115871,width=178,height=178/cute-skull-and-bones.png");
 }
+
 
 
 /*
