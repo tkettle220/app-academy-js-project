@@ -108,8 +108,23 @@ body {
   width: 100%;
 }
 
-.player {
+.Player {
+  background: purple;
+}
+
+.Enemy {
   background: red;
+}
+
+.Coin {
+  background: blue;
+}
+
+/*
+Collision!
+*/
+.Player.Enemy {
+  background: yellow;
 }
 
 
