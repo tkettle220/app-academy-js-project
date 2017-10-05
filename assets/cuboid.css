@@ -75,7 +75,19 @@ body {
 }
 
 button {
-  width: 50px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #203C3C;
+  background: #C9E8E6;
+}
+
+button:hover {
+  background: #499B96;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
 }
 
 button[name="new-game-button"] {
@@ -109,10 +121,12 @@ button[name="new-game-button"] {
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(45deg);
   -webkit-transition: all .3s linear;
-  
+
 }
 
 .side {
+  /*the text indent is just to hide the text I put in divs for my own use during coding, a final product could remove this css and delete all the text in the divs*/
+  text-indent: -1000em;
   position: absolute;
   width: 300px;
   height: 300px;
