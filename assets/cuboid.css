@@ -122,6 +122,18 @@ button[selected="selected"] {
   text-align: center;
 }
 
+.level {
+  position: absolute;
+  top: 375px;
+  left: 115px;
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Avant Garde" "Century Gothic", sans-serif;
+}
+
 .cube {
   font-size: 20px;
   width: 300px;
