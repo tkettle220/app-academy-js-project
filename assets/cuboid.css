@@ -77,6 +77,8 @@ body {
 }
 
 button {
+  color: black;
+  font-family: "Avant Garde" "Century Gothic", sans-serif;
   padding: 10px;
   border-radius: 3px;
   border: 1px solid #203C3C;
