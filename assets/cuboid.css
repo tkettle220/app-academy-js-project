@@ -31,11 +31,13 @@ html {
 
 body {
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: auto;
+  background-size: cover;
     background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
 }
 
@@ -90,8 +92,13 @@ button:focus {
   outline: 0;
 }
 
+
 button[name="new-game-button"] {
   display: none;
+}
+
+button[selected="selected"] {
+  background: #499B96;
 }
 
 .sidebar-footer {
@@ -125,8 +132,6 @@ button[name="new-game-button"] {
 }
 
 .side {
-  /*the text indent is just to hide the text I put in divs for my own use during coding, a final product could remove this css and delete all the text in the divs*/
-  text-indent: -1000em;
   position: absolute;
   width: 300px;
   height: 300px;
