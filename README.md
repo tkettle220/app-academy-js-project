@@ -1,24 +1,44 @@
 # Cuboid
 
-  Cuboid is a game played with the arrow keys in the browser. The basic goal of the game is to collect as many coins as possible while avoiding the spinning blades. The gamespace is represented by the surface of a rotatable cube. 
+  Cuboid is a game played with the arrow keys in the browser. The basic goal of the game is to collect as many coins as possible while avoiding the spinning blades. The game is made interesting and challenging due to it taking place on the surface of a rotatable cube.
 
-## Inspiration and Demo
-  This game is inspired by the following 2d game called Smove:
-  https://www.youtube.com/watch?v=In4ky-LBBi0
+## Live Game and Demo
+  Play the game [here](https://tkettle220.github.io/app-academy-js-project/)!
 
 [![Demo CountPages alpha](https://j.gifs.com/Q0JgXM.gif)](https://www.youtube.com/watch?v=In4ky-LBBi0)
 
-  Cuboid will be very similar, except rather than taking place on a 3x3 grid, it will take place on a cube's surface, with each surface consisting of a 3x3 grid. All enemies will spawn at the level's beginning, and never die--they will simply cycle around the cube based on their pattern.  A player can move across the cube's surface with the arrow keys and rotate the cube with a secondary set of functional arrow keys, WASD.
+## Features and Technical Details
 
-## Functionality & MVP
+Below is a discussion of how Cuboid is built.  It uses vanilla JavaScript, jQuery, and plain CSS.
 
-  1. The map must be a cube (3x3x3 initially) which players can traverse
-  2. The player and cube movements should be smooth and visually appealing
-  3. Enemies must traverse the cube according to different patterns based on the level
-  4. Player and enemy collisions should result in a game over
-  4. Level should increment every 10 coins collected
-  5. A user's score should be displayed and updated during the game and at the game over screen
+#### Displaying and Manipulating the Cube
 
+The first task was to display a rotatable cube--This was done by applying simple css transformations to 6 divs, each representing a face of the cube. To rotate, we simply bind keys to apply different css transformations to a cube wrapper that contains these 6 face divs.
+
+Unfortunately, we can only set a cube's rotation--we can't increment it with just css, and it's not super easy to get a cube's current rotation state. The easiest solution was to manually keep track of the cube's current rotation state by storing it as data in the jQuery object on initialization and updating it with every rotation.
+
+We also make sure to use modular arithmetic, since setting the cube's X-Rotation from 405deg to 0deg would make it spin around once plus another quarter turn, rather than just the single quarter turn that's needed.
+
+#### Moving the Player
+
+Player movement is simple on one cube face. Each cube face contains 9 divs with class names corresponding to their x,y location on the face.  This means to display and move the player all we need to do is keep track of a player's current face and x,y position, updating both to move.  
+
+To handle wrapping, when a new position is calculated, if the x or y coordinate is outside of the face, we first assess what direction the player is trying to go.  For instance, a negative x indicates the player has wrapped to the left of the current face.  To find the new face, we just store these relationships in a hash and convert old faces to new faces based on direction by doing an easy hash lookup.
+
+`{left-face: {left: 'back', right: 'front', top: 'top', bottom: 'bottom'},
+  front-face: etc.}`
+
+To find the new position, if we're moving left-right on the front, left, right, or back of the cube, we can just get the new position by doing modular arithmetic: pretty easy! Moving into or out of the top or bottom face is harder though, since the formula for the new position depends on where we're leaving the face from, so we take care to handle those cases separately.
+
+#### Moving the Player: Extras
+
+The above worked pretty well, but it was super unintuitive when a player moved to the top or bottom face.  There was a constant 'up' direction on the top face which meant that rotating the cube to the back face would result in the up key corresponding to a downward movement if on the top face. It made the game really hard to play, so we needed to have motion associated with the player movement keys depend on the rotation of the cube.
+
+
+
+#### Moving Enemies
+
+Enemies have a direction, such as [0,1] (constantly move to the right), which calculates their new position when moving by adding that vector to their current position. We need to handle crossing into and out of the top and bottom face once again, since a velocity of moving up on the left face into the top face is continued by moving right across the top face.
 
 ## Architecture and Technologies
 
@@ -39,37 +59,3 @@ Scripts involved in this project:
   * coin.js: logic for coin spawn and collecting
 
   * game.js: logic for updating level and keeping track of score
-
-## Implementation Timeline
-
-Weekend:
- Create a single 3x3 grid which a player can move on
-
-Monday:
-  Get webpack serving files and frame out index.html
-  Learn about creating 3d cube
-  Render a 3d cube with 3x3 grids on its surface which can be rotated with the arrow keys
-
-Tuesday:
-  Render the cube with a player on it
-  Allow the player to move about the cube
-
-Wednesday:
-  Create random coins which spawn on the cube and can be collected
-  Create leveling system and score tracking for coins
-  Add a pretty background and soundtrack
-
-Thursday:
-  Implement enemy spawn, movement, and logic
-  Add all the game logic and screens (instructions, start game, game over, etc.)
-
-Friday:
-  Write many levels, do bonuses as time permits
-
-## Bonus features
-  * A toggle feature which, when active, will auto rotate the cube to the surface the player moves to
-  * Levels with different cuboid dimensions
-  * Complicated enemy movements: diagonals, enemies which cannot traverse surfaces (they bounce off of edges), enemies which move in steps rather than smoothly, enemies which move with non-constant velocity, etc.
-  * Cube rotation which moves smoothly rather than in steps
-  * A mini-screen on the side which always shows the face of the cube which the player is currently on
-  * A pretty background which changes based on level
