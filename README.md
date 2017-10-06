@@ -11,8 +11,10 @@
 
 #### Level Transitions and Death
 <img src="/assets/images/levels.gif?raw=true" width="500px">
+
 #### Harder Levels
 <img src="/assets/images/advanced.gif?raw=true" width="500px">
+
 ## 3D Technical Details
 
 Below is a discussion of how the 3D challenges involved in Cuboid were handled. Only vanilla JavaScript, jQuery, and CSS were used.
