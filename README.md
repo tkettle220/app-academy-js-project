@@ -7,14 +7,12 @@
 
 
 #### Starting the game
-![Game Start Gif](https://j.gifs.com/W7ODEW.gif)
+<img src="/assets/images/intro.gif?raw=true" width="500px">
 
 #### Level Transitions and Death
-![Level Transition Gif](https://j.gifs.com/RoYxmL.gif)
-
+<img src="/assets/images/levels.gif?raw=true" width="500px">
 #### Harder Levels
-![Harder Levels Gif](https://j.gifs.com/wm9BzJ.gif)
-
+<img src="/assets/images/advanced.gif?raw=true" width="500px">
 ## 3D Technical Details
 
 Below is a discussion of how the 3D challenges involved in Cuboid were handled. Only vanilla JavaScript, jQuery, and CSS were used.
