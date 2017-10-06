@@ -38,7 +38,7 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-    background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
+  background-image: url("./images/cuboid_background.jpg");
 }
 
 
@@ -115,7 +115,6 @@ button[selected="selected"] {
   font-size: 24px;
 }
 
-
 .w1 {
   perspective: 3000px;
 }
@@ -167,27 +166,27 @@ button[selected="selected"] {
 .back   { transform: rotateY(-180deg) translateZ(150px); }
 
 .front {
-  background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
+  background-image: url("./images/cuboid_background.jpg");
 }
 
 .back {
-  background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
+  background-image: url("./images/cuboid_background.jpg");
 }
 
 .left {
-  background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
+  background-image: url("./images/cuboid_background.jpg");
 }
 
 .right {
-  background-image: url("http://static.tumblr.com/03fbd74abe2dc478281f1817730c9843/jyonxyo/Cy3n7218l/tumblr_static_f5babj1az8gk8kksc8w8ook4s.jpg");
+  background-image: url("./images/cuboid_background.jpg");
 }
 
 .top {
-  background-image: url("https://ak3.picdn.net/shutterstock/videos/2805553/thumb/1.jpg");
+  background-image: url("./images/sky.jpg");
 }
 
 .bottom {
-  background-image: url("https://img00.deviantart.net/2a25/i/2014/326/7/0/fantasy_cave_mysterious_digital_art_concept_by_hendyrico-d879l77.jpg");
+  background-image: url("./images/cave.jpg");
 ;
 }
 
@@ -205,18 +204,18 @@ button[selected="selected"] {
 }
 
 .Coin {
-  background-image: url("https://mobilegamegraphics.com/wp-content/uploads/2015/06/Coin_spin.gif");
+  background-image: url("./images/coin.gif");
   background-size: 40%;
 }
 
 .Player {
   background-size: 120%;
-  background-image: url("https://i.pinimg.com/originals/cc/87/84/cc87848693f5d5123cad63f60f74eff4.gif");
+  background-image: url("./images/hero.gif");
 }
 
 .Enemy {
   background-size: 80%;
-  background-image: url("https://vignette.wikia.nocookie.net/ninjahattori/images/6/68/Shuriken.gif/revision/latest?cb=20170320055932");
+  background-image: url("./images/enemy.gif");
 }
 
 
